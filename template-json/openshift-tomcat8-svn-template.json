@@ -125,7 +125,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "openshift",
-                            "name": "openshift-tomcat8-svn:latest"
+                            "name": "openshift-tomcat-svn:latest"
                         },
                         "env": [
                                     {
