@@ -7,12 +7,12 @@
       "kind": "ImageStream",
       "apiVersion": "v1",
       "metadata": {
-        "name": "openshift-tomcat8-svn",
+        "name": "openshift-tomcat-svn",
         "annotations": {"openshift.io/image.insecureRepository": "true"},
         "creationTimestamp": null
       },
       "spec": {
-        "dockerImageRepository": "master.example.com:5000/openshift-tomcat8-svn",
+        "dockerImageRepository": "master.example.com:5000/openshift-tomcat-svn",
         "tags": [
           {
             "name": "latest"
