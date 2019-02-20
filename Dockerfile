@@ -19,7 +19,7 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/libexec/s2i \
 COPY ./CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo
 
 #安装java-1.8.0-openjdk、subversion、maven
-RUN yum makecache &&  yum install -y java-1.8.0-openjdk subversion maven && yum clean all -y
+RUN yum makecache &&  yum install -y java-1.8.0-openjdk subversion maven rubygems kde-l10n-Chinese telnet && yum clean all -y &&localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 
 # 拷贝tomcat8 /opt/app-root
 COPY ./tomcat8/ /opt/app-root/tomcat8
