@@ -28,11 +28,10 @@ WORK_DIR=/tmp/src;
 cd $WORK_DIR;
 if [ ! -z ${SVN_URI} ] ; then
   echo "Fetching source from Subversion repository ${SVN_URI}"
-  svn co ${SVN_URI} --username=${SVN_USERNAME} --password=${SVN_PASSWORD} --no-auth-cache
-  export LC_ALL=C
-  export LC_CTYPE=zh_CN.utf8
+  export LC_ALL=zh_CN.utf8
   export LANG=zh_CN.utf8
   export LANGUAGE=zh_CN.utf8
+  svn co ${SVN_URI} --username=${SVN_USERNAME} --password=${SVN_PASSWORD} --no-auth-cache
   export SRC_DIR=`basename $SVN_URI`
   echo "Finished fetching source from Subversion repository ${SVN_URI}"
 
