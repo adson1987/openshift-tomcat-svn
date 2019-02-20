@@ -34,8 +34,13 @@ if [ ! -z ${SVN_URI} ] ; then
   svn co ${SVN_URI} --username=${SVN_USERNAME} --password=${SVN_PASSWORD} --no-auth-cache
   export SRC_DIR=`basename $SVN_URI`
   echo "Finished fetching source from Subversion repository ${SVN_URI}"
-
-find /tmp/src/ -name '*.war'|xargs -i mv -v {} /opt/app-root/tomcat8/webapps/ROOT.war
-
+  
+#  cd $WORK_DIR/$SRC_DIR/
+#  mvn package -Dmaven.test.skip=true;
+else
+  echo "SVN_URI not set, skip Subverion source download";
+fi
+#find /tmp/src/ -name '*.war'|xargs -i mv -v {} /opt/app-root/tomcat8/webapps/ROOT.war
+mv /tmp/src/* /opt/app-root/tomcat8/webapps/
 echo "---> Building application from source"
 # TODO: Add build steps for your application, eg npm install, bundle install
