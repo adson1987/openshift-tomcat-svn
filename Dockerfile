@@ -1,9 +1,9 @@
 
-# openshift-tomcat8-svn
+# openshift-tomcat-svn
 FROM docker.io/centos
 
 # TODO: Put the maintainer name in the image metadata
-MAINTAINER huliaoliao
+MAINTAINER adson
 
 # TODO: Rename the builder environment variable to inform users about application you provide them
 ENV BUILDER_VERSION 1.0
