@@ -42,5 +42,6 @@ else
 fi
 #find /tmp/src/ -name '*.war'|xargs -i mv -v {} /opt/app-root/tomcat8/webapps/ROOT.war
 mv /tmp/src/* /opt/app-root/tomcat8/webapps/
+sed 's/@127.0.0.1/@172.30.112.250/g' /opt/app-root/tomcat8/webapps/xxch/WEB-INF/classes/jeesite.properties
 echo "---> Building application from source"
 # TODO: Add build steps for your application, eg npm install, bundle install
