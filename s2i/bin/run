@@ -6,5 +6,5 @@
 # For more information see the documentation:
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
-sed 's/@127.0.0.1/@172.30.112.250/g' /opt/app-root/tomcat8/webapps/xxch/WEB-INF/classes/jeesite.properties
+
 exec /opt/app-root/tomcat8/bin/catalina.sh run
