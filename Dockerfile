@@ -29,6 +29,7 @@ COPY ./s2i/bin/ /usr/libexec/s2i
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1002
 RUN useradd -m tomcat -u 1002 && \
+    sed -i '1i JAVA_OPTS=''-Xms1024m -Xmx1024m -XX:PermSize=256m  -XX:MaxPermSize=386m''' /opt/app-root/tomcat8/bin/catalina.sh && \
     chmod -R a+rw /opt && \
     chmod -R a+rw /opt/app-root && \
     chmod a+rwx /opt/app-root/tomcat8/* && \
