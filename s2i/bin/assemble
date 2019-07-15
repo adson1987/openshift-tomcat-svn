@@ -41,6 +41,6 @@ else
   echo "SVN_URI not set, skip Subverion source download";
 fi
 #find /tmp/src/ -name '*.war'|xargs -i mv -v {} /opt/app-root/tomcat8/webapps/ROOT.war
-mv /tmp/src/* /opt/app-root/tomcat8/webapps/ && sed 's/@127.0.0.1\\:1521\\:orcl/@172.30.112.250\\:1521\\:bdcap/g' /opt/app-root/tomcat8/webapps/xxch/WEB-INF/classes/jeesite.properties
+mv /tmp/src/* /opt/app-root/tomcat8/webapps/ && sed 's/@127.0.0.1\\:1521\\:orcl/@172.30.112.250\\:1521\\:bdcap/g' /opt/app-root/tomcat8/webapps/xxch/WEB-INF/classes/jeesite.properties && chown -R tomcat.tomcat /opt
 echo "---> Building application from source"
 # TODO: Add build steps for your application, eg npm install, bundle install
