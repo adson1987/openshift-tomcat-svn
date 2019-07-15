@@ -36,6 +36,7 @@ RUN useradd -m tomcat -u 1002 && \
     chmod +x /opt/app-root/tomcat8/bin/*.sh && \
 #    rm -rf /opt/app-root/tomcat8/webapps/* && \
     chmod -R a+rwx /opt/app-root/ && \
+    chown -R tomcat.tomcat /opt/ && \
     rm -rf /usr/share/maven/conf/settings.xml
 
 # 修改maven的settings.xml，配置自己的库
