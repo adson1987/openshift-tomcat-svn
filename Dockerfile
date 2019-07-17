@@ -43,7 +43,7 @@ RUN useradd -m tomcat -u 1002 && \
 ADD ./settings.xml /usr/share/maven/conf/
 
 # This default user is created in the openshift/base-centos7 image
-USER 1002
+#USER 1002
 
 # TODO: Set the default port for applications built using this image
 EXPOSE 8080
